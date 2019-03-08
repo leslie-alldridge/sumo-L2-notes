@@ -107,3 +107,14 @@ _sourceCategory=Labs/Apache/Access
 | where !(status_code=200 or status_code=304)
 | transpose row _timeslice column status_code 
 
+### Changes and Moving Averages
+
+https://support.sumologic.com/hc/en-us/community/posts/115007137347-Plot-Error-Counts-against-Rolling-Averages
+
+Bar and line chart combo example 
+
+### Logcompare
+Allows you to compare log activity from two different time periods, providing you insight on how your current time compares to a baseline. 
+
+
+### ......Up to lab 11.....

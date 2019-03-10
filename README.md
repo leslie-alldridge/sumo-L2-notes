@@ -117,4 +117,11 @@ Bar and line chart combo example
 Allows you to compare log activity from two different time periods, providing you insight on how your current time compares to a baseline. 
 
 
-### ......Up to lab 11.....
+### Indentify out of the ordinary events
+_sourceCategory=Labs/Apache/Access and status_code=404
+
+|timeslice 1m
+|count (status_code) as error_count by _timeslice
+|outlier error_count window=2, consecutive=2, threshold=2, direction=+-
+
+Can use predict instead of outlier to predict future events.

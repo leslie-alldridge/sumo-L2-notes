@@ -148,3 +148,13 @@ results by flow
 
 | count by fromstate, tostate
 
+### Logs to metrics 
+
+Extracts metrics from logs. Logs can generate time-series charts on their own, this is not a necessary step. However, extracting metrics from logs reduces the need to re-query unstructured data to generate a chart. The chart runtime, performance, retention, and alerting capabilities are improved. 
+
+For Metrics and Dimensions, you can select any field by which you want to slice and dice the data. Just remember, only one Metric can be selected and must be a numerical value. You may also use the number of resulting messages from the Parse Expression query as the Metric, which we’ll show in our example.
+
+Timeshift is very handy for comparing across multiple time periods 
+
+Identifying an outlier on a rate of change is a better indicator of an impending problem.  
+

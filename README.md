@@ -158,3 +158,10 @@ Timeshift is very handy for comparing across multiple time periods
 
 Identifying an outlier on a rate of change is a better indicator of an impending problem.  
 
+### Relating metrics and logs
+Metrics = identify symptoms in your environment (what is going on)
+Relevant logs = identify the cause (why is this happening)
+
+### Alerts
+Meaningful alerts guidelines https://www.sumologic.com/blog/log-management-analysis/2-key-principles-creating-meaningful-alerts/
+

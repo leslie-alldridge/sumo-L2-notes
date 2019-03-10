@@ -125,3 +125,26 @@ _sourceCategory=Labs/Apache/Access and status_code=404
 |outlier error_count window=2, consecutive=2, threshold=2, direction=+-
 
 Can use predict instead of outlier to predict future events.
+
+### Checking state by IP
+
+_sourceCategory=Labs/ecommark
+
+| parse regex "(?<ip>[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})" nodrop
+
+| transaction on ip
+
+with "*/confirmation*" as confirmation,
+
+with "*Order shipped*" as ordershipped,
+
+with "*/cart*" as cart,
+
+with "*/shippingInfo*" as shippinginfo,
+
+with "*/billinginfo*" as billinginfo
+
+results by flow
+
+| count by fromstate, tostate
+

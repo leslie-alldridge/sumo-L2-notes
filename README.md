@@ -198,4 +198,50 @@ Collected with Sumo Logic Cloud Integrations
 _collector and _sourceHost default to hostname if nothing is provided
 _sourceCategory can be freely configured as the main tag, going from least -> most descriptive
 
+### Shared searches
+You can delete someone elses alerts if you have edit permissions on that shared search
 
+library view shows the highest level parent folder and the specifically shared folder will lie within
+
+Sharing FAQ: https://help.sumologic.com/Manage/Content_Sharing/Content_Sharing_FAQ
+
+### Partitions
+
+Indexes content so you can search faster 
+
+When you run a search against an index, results are returned more quickly and efficiently because the search runs against a smaller data set.
+
+Partitions ingest messages in real time
+
+### Field extraction rules again 
+Benefits:
+- better performance
+- standardized field names
+- simplified searches
+
+Best practices:
+- Build simple, specific rules
+- Test parse and no drop
+
+Limitations:
+- 50 rules or 200 fields
+- not all operators are supported
+
+### Scheduled Views
+- Long term trends
+- find the needle in the haystack
+- data doesn't count against ingest volume
+- allows backfilling
+- view is updated once per minute
+
+Scenarios 
+
+Pre extract fields that are often used - Field extraction rules
+
+Identify long term trends - Scheduled view (1% or less)
+
+Segregate by meta data - partition
+
+Pre-computed or data ready for query - Scheduled view
+
+RBAC to grant or deny access - partition and scheduled view

@@ -165,3 +165,20 @@ Relevant logs = identify the cause (why is this happening)
 ### Alerts
 Meaningful alerts guidelines https://www.sumologic.com/blog/log-management-analysis/2-key-principles-creating-meaningful-alerts/
 
+### Collector Considerations
+Consider one collector for:
+- Running a very high bandwidth network with high logging levels.
+- A central collection point for many sources
+
+Consider multiple collectors for:
+- You expect the combined number of files coming into one Collector to exceed 500
+- Your hardware has memory or cpu limitations
+- You expect combined logging traffic for one Collector to be higher than 15,000 events per second.
+- Your network clusters or regions are geographically separated.
+- You prefer to install many collectors, for example, one per machine to collect local files.
+
+Design your deployment
+https://help.sumologic.com/03Send-Data/01-Design-Your-Deployment
+
+### Collector installation
+Installed on hosts and sends log data via https directly to sumo. 

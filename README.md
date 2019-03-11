@@ -180,5 +180,22 @@ Consider multiple collectors for:
 Design your deployment
 https://help.sumologic.com/03Send-Data/01-Design-Your-Deployment
 
-### Collector installation
+### Local Data Collection
 Installed on hosts and sends log data via https directly to sumo. 
+
+Typically used for large amounts of similar servers. Datacenters and cloud instances.
+
+### Centralized Data Collection
+Ability to send logs to a local machine (dedicated log machine) that will collate and forward the data to sumo via https
+
+### Cloud Data Collection
+Collected with Sumo Logic Cloud Integrations
+- S3 Bucket
+- Office 365 and Google API
+- HTTPS 
+
+### Metadata
+_collector and _sourceHost default to hostname if nothing is provided
+_sourceCategory can be freely configured as the main tag, going from least -> most descriptive
+
+
